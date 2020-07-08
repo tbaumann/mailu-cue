@@ -6,7 +6,7 @@ deployment: redis: {
 			metadata: labels: tier: "backend"
 			spec: {
 				containers: [{
-					image:           "redis:5-alpine"
+					image: "redis:5-alpine"
 					volumeMounts: [{
 						mountPath: "/data"
 						name:      "redisdata"
