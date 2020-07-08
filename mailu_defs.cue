@@ -227,6 +227,8 @@ _spec: spec: template: spec: containers: [...{
 }]
 
 for x in [deployment, daemonSet, statefulSet] for k, v in x {
+	// FIXME: Could possibly overwrite service:
+	// Check that
 	service: "\(k)": {
 		spec: selector: v.spec.template.metadata.labels
 
